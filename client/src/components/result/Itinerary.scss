@@ -1,0 +1,11 @@
+@import "~bpk-mixins";
+
+.itinerary{
+  margin: 15px auto;
+  width: 95%;
+  background-color: $bpk-color-white;
+  padding: 13px 3%;
+  height: 206px;
+  @include bpk-border-radius-sm();
+  @include bpk-box-shadow-sm();
+}

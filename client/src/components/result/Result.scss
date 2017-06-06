@@ -1,0 +1,10 @@
+@import "~bpk-mixins";
+
+.spinner{
+  @include bpk-spinner(spinner-blue-500);
+  @include bpk-spinner--xl();
+
+  top: 150px;
+  position: absolute;
+  left: 45%;
+}

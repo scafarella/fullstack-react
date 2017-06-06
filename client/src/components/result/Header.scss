@@ -1,0 +1,28 @@
+@import "~bpk-mixins";
+
+.resultHeader{
+  background-color: $bpk-color-blue-500;
+  color: $bpk-color-white;
+  padding: 10px 1%;
+  width:100%;
+  z-index:100;
+  .heading{
+    @include bpk-heading-1();
+    @include bpk-heading--no-bottom-margin();
+    padding-left: 1%;
+    .from{
+      position:relative;
+      margin-right: 20px;
+    }
+    .from:after{
+          background-image: url('#{map-get($bpk-icons-lg, 'long-arrow-right-white')}');
+          width:30px;
+          height:30px;
+          content: " ";
+          position:absolute;
+          left:70px;
+          top:14px;
+          background-repeat: no-repeat;
+    }
+  }
+}

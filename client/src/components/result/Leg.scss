@@ -1,0 +1,50 @@
+@import "~bpk-mixins";
+
+.leg{
+  clear: left;
+  margin-bottom:15px;
+  .container{
+    width: 86%;
+    float: left;
+    img{
+      width:20px;
+      float:left;
+      @include bpk-border-radius-xs();
+    }
+    .from{
+      float: left;
+      width:50%;
+      position:relative;
+      margin-left: 3%;
+    }
+    .from:after{
+        background-image: url('#{map-get($bpk-icons-lg, 'long-arrow-right-gray-300')}');
+        width:30px;
+        height:30px;
+        content: " ";
+        position:absolute;
+        left:70px;
+        top:14px;
+        background-repeat: no-repeat;
+    }
+    .place{
+      color: $bpk-color-gray-300;
+    }
+  }
+  .duration{
+    clear: right;
+    margin-left: 40%;
+    @include bpk-text-sm();
+    .direct{
+      color:$bpk-color-green-500;
+      padding-top: 11px;
+    }
+    .indirect{
+      color:$bpk-color-red-900;
+      padding-top: 11px;
+    }
+  }
+}
+.leg:nth-child(2){
+  margin-bottom: 20px;
+}
